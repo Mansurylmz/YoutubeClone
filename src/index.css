@@ -1,0 +1,71 @@
+@import "tailwindcss";
+body {
+    background: #0F0F0F;
+    color: white;
+    
+  }
+.videos{
+    overflow-y: auto !important;
+    height: calc(100vh- 65px);
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap: 50px;
+}
+
+.side{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .side::-webkit-scrollbar {
+    width: 8px; /* Scrollbar genişliği */
+}
+
+.side::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar rengi */
+    border-radius: 10px; /* Köşeleri yuvarlak yap */
+}
+
+.side::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Üzerine gelince rengi koyulaştır */
+}
+
+.side::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Scrollbar arka planı */
+    border-radius: 10px;
+}
+.page-content{
+    max-width: 1600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 400px;
+    gap: 40px;
+    pad: 40px 60px;
+}
+@media(max-width:1200px){
+    .page-content{
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+}
+.col{
+    display: grid;
+    gap: 20px;
+}
+ 
+.row{
+    display: grid;
+    grid-template-columns: 168px auto;
+    gap: 20px;
+}
+.row .pp,.row .views{
+    display: none;
+}
+@media (min-width:730px){
+    .wrapper .row{
+        grid-template-columns: 1f 2fr !important;
+    }
+}
